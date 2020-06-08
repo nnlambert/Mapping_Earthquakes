@@ -12,14 +12,6 @@ To illustrate the severity of the earthquakes in relation to the tectonic plates
 ### Process
 Created a new folder named  “Earthquake_Challenge.”
 Establish Folder Structure
-Earthquake_Challenge folder:
-index.html
-static
- css
-  style.css
- js
-  config.js
-  logic.js
 
 Used the GeoJSON/PB2002_boundaries.json data from the GitHub repository for the tectonic plate data. 
 Placed the d3.json() call with the L.geoJSON() layer for the tectonic plate data.
