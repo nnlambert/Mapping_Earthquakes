@@ -3,6 +3,8 @@
 ### Background
 To illustrate the severity of the earthquakes in relation to the tectonic plates. I will need to make an API call to the tectonic plate data using d3.json(), and then add the data as an overlay to the map using the L.geoJSON() layer. All map styles will be added to the base layer so that they show up on the map to allow the user to change which layers are visible.
 
+Final product can be viewed in the Mapping_Earthquakes_Final folder
+
 ### Objectives
 - The goals of this challenge are to use d3.json() to get tectonic plate data and add the data using the L.geoJSON() layer.
 - Style the tectonic plate LineString data to stand out on the map.
