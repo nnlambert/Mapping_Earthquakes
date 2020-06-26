@@ -59,12 +59,10 @@ var myStyle = {
 // Then we add a control to the map that will allow the user to change
 // which layers are visible.
 L.control.layers(baseMaps, overlays).addTo(map);
- 
+
+let boundaries = "https://raw.githubusercontent.com/fraxen/tectonicplates/master/GeoJSON/PB2002_boundaries.json"
 // Then we add our 'graymap' tile layer to the map.
 streets.addTo(map);
- 
-//Get data for fault lines
-var faults = "/TecPlates/PB2002_boundaries.json";
   
 // Grabbing our GeoJSON data.
 d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson").then(function(data) {
@@ -159,17 +157,21 @@ legend.addTo(map);
     });
 
 // Grabbing our GeoJSON data.
-d3.json("https://raw.githubusercontent.com/fraxen/tectonicplates/master/GeoJSON/PB2002_boundaries.json", (function(data) 
+d3.json(boundaries).then(function(data) 
 {
+  function myStyle2() {
+    return {
+      color: "red",
+      weight: 1
+    };
+  }
     // This function returns the style data for each of the earthquakes we plot on
 
     L.geoJson(data, {
-        pointToLayer: function(feature, latlng) {
-            return L.polygon(latlng);
-      },
-        style: myStyle
+      style: myStyle2
     }).addTo(tectonic);
 
-}));
+})
+;
 
 tectonic.addTo(map)
