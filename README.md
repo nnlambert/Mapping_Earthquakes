@@ -11,6 +11,7 @@ Final product can be viewed in the Mapping_Earthquakes_Final folder
 - Add the tectonic plate data as an overlay with the earthquake data.
 - Add a third map style to allow the user to select from three different maps.
 
+![Final_Map](Mapping_Earthquakes_Final/TecPlates/Final_Map.png)
 ### Process
 Created a new folder named  “Earthquake_Challenge.”
 Established Folder Structure.
